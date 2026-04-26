@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBloom Academy - Learn, Grow, Earn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat; 
+        }
+        .course-card { transition: all 0.3s ease; }
+        .course-card:hover { transform: translateY(-12px); box-shadow: 0 25px 30px -10px rgb(0 0 0 / 0.15); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-seedling text-4xl text-emerald-600"></i>
+                <span class="text-3xl font-bold tracking-tight text-emerald-700">SkillBloom</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#" class="hover:text-emerald-600 transition">Courses</a>
+                <a href="#" class="hover:text-emerald-600 transition">Community</a>
+                <a href="#" class="hover:text-emerald-600 transition">Blog</a>
+                <a href="#" class="hover:text-emerald-600 transition">Pricing</a>
+            </div>
+            <button onclick="alert('Welcome! Free courses are available below. Sign up coming soon.')" 
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-2xl font-semibold transition">
+                Join Free Today
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                Learn New Skills.<br>Bloom Your Future.
+            </h1>
+            <p class="text-2xl mb-10 max-w-2xl mx-auto opacity-90">
+                High-quality courses, real projects, certificates & community. 
+                Start free — upgrade when ready to earn more.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})" 
+                        class="bg-white text-emerald-700 px-10 py-4 rounded-2xl text-xl font-bold hover:bg-gray-100 transition">
+                    Browse Free Courses
+                </button>
+                <button onclick="alert('Premium: ₦4,500/month or ₦39,000/year – full access + certificates')" 
+                        class="border-2 border-white px-10 py-4 rounded-2xl text-xl font-bold hover:bg-white hover:text-emerald-700 transition">
+                    Go Premium
+                </button>
+            </div>
+            <p class="mt-12 text-sm opacity-75">⭐️ 4.9/5 from 12,000+ happy learners in Nigeria & beyond</p>
+        </div>
+    </section>
+
+    <!-- Popular Courses -->
+    <section id="courses" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-3">Popular Courses</h2>
+            <p class="text-center text-xl text-gray-600 mb-12">Start for free • Upgrade to unlock everything</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="course-card bg-white rounded-3xl overflow-hidden shadow">
+                    <img src="https://picsum.photos/id/201/600/340" alt="AI Course" class="w-full h-52 object-cover">
+                    <div class="p-7">
+                        <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm">Free Starter</span>
+                        <h3 class="text-2xl font-semibold mt-4 mb-2">AI Tools for Students & Freelancers</h3>
+                        <p class="text-gray-600">Master ChatGPT, image tools & automation in 3 weeks.</p>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="font-bold text-emerald-600">Free to start • ₦12,000 full</span>
+                            <button onclick="alert('Course added to your learning list! (Demo)')" 
+                                    class="bg-emerald-600 text-white px-7 py-3 rounded-2xl text-sm font-medium">Enroll Free</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-3xl overflow-hidden shadow">
+                    <img src="https://picsum.photos/id/237/600/340" alt="Marketing" class="w-full h-52 object-cover">
+                    <div class="p-7">
+                        <span class="bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-sm">Best Seller</span>
+                        <h3 class="text-2xl font-semibold mt-4 mb-2">Digital Marketing in 2026</h3>
+                        <p class="text-gray-600">Instagram, TikTok & WhatsApp Business strategies.</p>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="font-bold text-emerald-600">₦18,500</span>
+                            <button onclick="alert('Course added to your learning list! (Demo)')" 
+                                    class="bg-emerald-600 text-white px-7 py-3 rounded-2xl text-sm font-medium">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-3xl overflow-hidden shadow">
+                    <img src="https://picsum.photos/id/1015/600/340" alt="Freelance" class="w-full h-52 object-cover">
+                    <div class="p-7">
+                        <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm">New</span>
+                        <h3 class="text-2xl font-semibold mt-4 mb-2">Start Freelancing Successfully</h3>
+                        <p class="text-gray-600">Get clients, set prices & build income from home.</p>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="font-bold text-emerald-600">₦14,900</span>
+                            <button onclick="alert('Course added to your learning list! (Demo)')" 
+                                    class="bg-emerald-600 text-white px-7 py-3 rounded-2xl text-sm font-medium">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Choose Your Learning Path</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free -->
+                <div class="border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">Free Plan</h3>
+                    <p class="text-6xl font-bold my-6">₦0</p>
+                    <ul class="space-y-4 text-left mb-10">
+                        <li>✅ 5 Free Courses</li>
+                        <li>✅ Community Forum</li>
+                        <li>❌ Certificates</li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-emerald-600 text-emerald-600 rounded-2xl font-medium">Start Free</button>
+                </div>
+                <!-- Premium -->
+                <div class="border-2 border-emerald-600 rounded-3xl p-8 relative scale-105 shadow-xl">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-8 py-1 rounded-full text-sm font-medium">Recommended</div>
+                    <h3 class="text-2xl font-semibold">Premium Monthly</h3>
+                    <p class="text-6xl font-bold my-6">₦4,500<span class="text-base font-normal">/mo</span></p>
+                    <ul class="space-y-4 text-left mb-10">
+                        <li>✅ All Courses + New Releases</li>
+                        <li>✅ Certificates & Projects</li>
+                        <li>✅ Live Sessions</li>
+                    </ul>
+                    <button onclick="alert('Premium unlocks full access. Great for serious skill-building!')" 
+                            class="w-full py-4 bg-emerald-600 text-white rounded-2xl font-medium">Subscribe Now</button>
+                </div>
+                <!-- Annual -->
+                <div class="border rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">Annual Premium</h3>
+                    <p class="text-6xl font-bold my-6">₦39,000<span class="text-base font-normal">/year</span></p>
+                    <p class="text-emerald-600 font-medium mb-6">Save ₦15,000!</p>
+                    <ul class="space-y-4 text-left mb-10">
+                        <li>✅ Everything in Monthly</li>
+                        <li>✅ Priority Support</li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-emerald-600 text-emerald-600 rounded-2xl font-medium">Choose Annual</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16 text-center">
+        <p class="text-3xl font-bold mb-2">SkillBloom Academy</p>
+        <p class="mb-8">Learn today • Earn tomorrow • Built for ambitious Nigerians</p>
+        <p class="text-sm opacity-60">© 2026 SkillBloom • Your success starts here</p>
+    </footer>
+
+</body>
+  </html>
