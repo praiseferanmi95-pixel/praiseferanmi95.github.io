@@ -3,88 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillBloom Academy - Learn, Grow, Earn</title>
+  <title>SkillBloom Academy • Learn, Grow, Earn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://js.paystack.co/v2/inline.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body { font-family: system-ui, sans-serif; }
-    .course-card { transition: all 0.3s; }
-    .course-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .hero-bg { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://picsum.photos/id/1015/2000/1200'); background-size: cover; background-position: center; }
+    .course-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .course-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+    .nav-link { position: relative; }
+    .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #6366f1; transition: width 0.3s; }
+    .nav-link:hover:after { width: 100%; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-zinc-50 text-zinc-900">
 
-  <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h1 class="text-5xl font-bold mb-4">SkillBloom Academy</h1>
-      <p class="text-2xl mb-4">Learn New Skills. Bloom Your Future.</p>
-      <p class="text-xl mb-10">High-quality courses • Real projects • Certificates • Community</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#courses" class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100">Browse Free Courses</a>
-        <a href="#earn" class="border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-indigo-600">Start Earning Today</a>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">S</div>
+        <div>
+          <span class="font-bold text-2xl tracking-tight">SkillBloom</span>
+          <span class="text-xs text-zinc-500 block -mt-1">Academy</span>
+        </div>
       </div>
-      <p class="mt-8 text-sm">⭐️ 4.9/5 from 12,000+ happy learners in Nigeria & beyond</p>
+      <div class="hidden md:flex items-center gap-8 font-medium">
+        <a href="#courses" class="nav-link text-zinc-700 hover:text-indigo-600">Courses</a>
+        <a href="#earn" class="nav-link text-zinc-700 hover:text-indigo-600">Earn With Us</a>
+        <a href="#how" class="nav-link text-zinc-700 hover:text-indigo-600">How It Works</a>
+        <a href="#testimonials" class="nav-link text-zinc-700 hover:text-indigo-600">Success Stories</a>
+      </div>
+      <a href="#courses" class="bg-indigo-600 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-indigo-700 transition">Browse Courses</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-bg h-screen flex items-center text-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+        Learn New Skills.<br>Bloom Your Future.
+      </h1>
+      <p class="text-2xl md:text-3xl mb-10 max-w-2xl mx-auto text-white/90">
+        High-quality online courses designed for young Nigerians. Start free today and earn real income tomorrow.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#courses" class="bg-white text-indigo-700 px-10 py-5 rounded-3xl font-semibold text-xl hover:bg-white/90 transition">Start Learning Free</a>
+        <a href="#earn" class="border-2 border-white px-10 py-5 rounded-3xl font-semibold text-xl hover:bg-white hover:text-indigo-700 transition">Start Earning</a>
+      </div>
+      <div class="mt-12 flex items-center justify-center gap-8 text-sm">
+        <div class="flex items-center gap-2"><i class="fas fa-star text-yellow-400"></i> 4.9/5</div>
+        <div>12,000+ Students</div>
+        <div>Nigeria & Beyond</div>
+      </div>
     </div>
   </header>
 
-  <!-- Popular Courses Section -->
-  <section id="courses" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Popular Courses</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+  <!-- Popular Courses -->
+  <section id="courses" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-indigo-600 font-semibold tracking-widest">EXPLORE OUR COURSES</span>
+        <h2 class="text-5xl font-bold mt-3">Popular Programs</h2>
+      </div>
 
-        <!-- AI Tools - Free -->
-        <div class="course-card bg-white border border-gray-200 rounded-2xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-            <span class="text-white text-6xl">🤖</span>
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- AI Tools -->
+        <div class="course-card bg-white border border-zinc-100 rounded-3xl overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center relative">
+            <span class="text-8xl">🤖</span>
+            <div class="absolute top-4 right-4 bg-white/90 text-zinc-800 text-xs px-3 py-1 rounded-2xl font-medium">Free Starter</div>
           </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-xl mb-2">AI Tools for Students & Freelancers</h3>
-            <p class="text-gray-600 mb-4">Master ChatGPT, image tools & automation in 3 weeks.</p>
-            <div class="flex justify-between items-center mb-6">
-              <span class="text-green-600 font-bold">Free to Start</span>
-              <span class="text-sm text-gray-500 line-through">₦12,000</span>
+          <div class="p-8">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-emerald-600 font-semibold">3 Weeks</span>
+              <span class="flex items-center gap-1 text-amber-500"><i class="fas fa-star"></i> 4.9</span>
             </div>
+            <h3 class="text-2xl font-semibold mb-3">AI Tools for Students & Freelancers</h3>
+            <p class="text-zinc-600 mb-8">Master ChatGPT, Midjourney, automation & more. Build real projects.</p>
             <button onclick="enrollFree('AI Tools for Students & Freelancers')" 
-                    class="w-full bg-green-600 text-white py-3 rounded-xl font-medium hover:bg-green-700">
+                    class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-semibold transition">
               Enroll Free
             </button>
           </div>
         </div>
 
-        <!-- Digital Marketing - Paid -->
-        <div class="course-card bg-white border border-gray-200 rounded-2xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
-            <span class="text-white text-6xl">📱</span>
+        <!-- Digital Marketing -->
+        <div class="course-card bg-white border border-zinc-100 rounded-3xl overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center relative">
+            <span class="text-8xl">📱</span>
           </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-xl mb-2">Digital Marketing in 2026</h3>
-            <p class="text-gray-600 mb-4">Instagram, TikTok & WhatsApp Business strategies.</p>
-            <div class="flex justify-between items-center mb-6">
-              <span class="font-bold text-xl">₦18,500</span>
+          <div class="p-8">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-emerald-600 font-semibold">6 Weeks</span>
+              <span class="flex items-center gap-1 text-amber-500"><i class="fas fa-star"></i> 4.8</span>
             </div>
+            <h3 class="text-2xl font-semibold mb-3">Digital Marketing in 2026</h3>
+            <p class="text-zinc-600 mb-8">Instagram, TikTok, WhatsApp Business & SEO strategies that convert.</p>
+            <div class="text-3xl font-bold mb-6">₦18,500</div>
             <button onclick="payWithPaystack('Digital Marketing in 2026', 18500)" 
-                    class="w-full bg-indigo-600 text-white py-3 rounded-xl font-medium hover:bg-indigo-700">
+                    class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-semibold transition">
               Enroll Now
             </button>
           </div>
         </div>
 
-        <!-- Freelancing - Paid -->
-        <div class="course-card bg-white border border-gray-200 rounded-2xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
-            <span class="text-white text-6xl">💼</span>
+        <!-- Freelancing -->
+        <div class="course-card bg-white border border-zinc-100 rounded-3xl overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center relative">
+            <span class="text-8xl">💼</span>
           </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-xl mb-2">Start Freelancing Successfully</h3>
-            <p class="text-gray-600 mb-4">Get clients, set prices & build income from home.</p>
-            <div class="flex justify-between items-center mb-6">
-              <span class="font-bold text-xl">₦14,900</span>
+          <div class="p-8">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-emerald-600 font-semibold">5 Weeks</span>
+              <span class="flex items-center gap-1 text-amber-500"><i class="fas fa-star"></i> 4.9</span>
             </div>
+            <h3 class="text-2xl font-semibold mb-3">Start Freelancing Successfully</h3>
+            <p class="text-zinc-600 mb-8">Find clients, set prices, deliver & scale your freelance income from home.</p>
+            <div class="text-3xl font-bold mb-6">₦14,900</div>
             <button onclick="payWithPaystack('Start Freelancing Successfully', 14900)" 
-                    class="w-full bg-indigo-600 text-white py-3 rounded-xl font-medium hover:bg-indigo-700">
+                    class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-semibold transition">
               Enroll Now
             </button>
           </div>
@@ -94,101 +134,143 @@
     </div>
   </section>
 
-  <!-- Earn from SkillBloom Section -->
-  <section id="earn" class="py-20 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">Earn from SkillBloom</h2>
-      <p class="text-center text-xl text-gray-600 mb-12">Learn → Grow → Earn. Two powerful ways to make money with us.</p>
+  <!-- How It Works -->
+  <section id="how" class="py-24 bg-zinc-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold">How SkillBloom Works</h2>
+        <p class="text-xl text-zinc-600 mt-4">Simple steps to start learning and earning</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-3xl shadow flex items-center justify-center text-4xl mb-6">1️⃣</div>
+          <h3 class="font-semibold text-2xl mb-3">Enroll</h3>
+          <p class="text-zinc-600">Sign up for free or paid courses in minutes.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-3xl shadow flex items-center justify-center text-4xl mb-6">2️⃣</div>
+          <h3 class="font-semibold text-2xl mb-3">Learn & Practice</h3>
+          <p class="text-zinc-600">Access video lessons, projects, and community support.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto bg-white rounded-3xl shadow flex items-center justify-center text-4xl mb-6">3️⃣</div>
+          <h3 class="font-semibold text-2xl mb-3">Earn</h3>
+          <p class="text-zinc-600">Apply skills, get clients, or become an instructor/affiliate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-2 gap-10">
+  <!-- Earn Section -->
+  <section id="earn" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold">Earn from SkillBloom</h2>
+        <p class="text-2xl text-zinc-600 mt-4">Turn knowledge into income</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
 
-        <!-- Affiliate Program -->
-        <div class="bg-white rounded-3xl p-10 shadow-sm">
-          <div class="text-5xl mb-6">💰</div>
-          <h3 class="text-3xl font-bold mb-3">Earn as an Affiliate</h3>
-          <p class="text-gray-600 mb-8">Promote our courses and earn up to 30% commission on every paid enrollment. Paid weekly via bank transfer.</p>
-          <ul class="space-y-4 mb-10">
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> Unique referral link</li>
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> Marketing materials provided</li>
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> No experience required</li>
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> Perfect for WhatsApp & Instagram</li>
-          </ul>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi7OaWyuy8rMOgnL9wowaJkPmUpDXEh3vZ7Dg_jmyGuG7I1g/viewform?usp=publish-editor" 
-             target="_blank"
-             class="block w-full text-center bg-green-600 text-white py-4 rounded-2xl font-semibold hover:bg-green-700">
-            Join Affiliate Program - It's Free
-          </a>
+        <div class="bg-zinc-50 border border-zinc-100 rounded-3xl p-12 hover:shadow-xl transition">
+          <div class="text-7xl mb-8">💰</div>
+          <h3 class="text-4xl font-bold mb-4">Affiliate Program</h3>
+          <p class="text-xl text-zinc-600 mb-10">Share courses and earn up to 30% commission on every sale. Weekly payouts via bank transfer.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi7OaWyuy8rMOgnL9wowaJkPmUpDXEh3vZ7Dg_jmyGuG7I1g/viewform?usp=publish-editor" target="_blank"
+             class="block w-full text-center py-5 bg-emerald-600 text-white rounded-3xl font-semibold text-lg hover:bg-emerald-700">Join Affiliate Program - Free</a>
         </div>
 
-        <!-- Become an Instructor -->
-        <div class="bg-white rounded-3xl p-10 shadow-sm">
-          <div class="text-5xl mb-6">🎓</div>
-          <h3 class="text-3xl font-bold mb-3">Become a SkillBloom Instructor</h3>
-          <p class="text-gray-600 mb-8">Got skills? Create your own course and keep up to 70% of every sale. We handle marketing and payments.</p>
-          <ul class="space-y-4 mb-10">
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> High revenue share</li>
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> Reach thousands of students</li>
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> Get featured on homepage</li>
-            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✔</span> We support you with tools</li>
-          </ul>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUBjj1y21JWTiOApf1_2dNC6n89kSHvuQcA5MhDYiFm3q9fA/viewform?usp=publish-editor" 
-             target="_blank"
-             class="block w-full text-center bg-purple-600 text-white py-4 rounded-2xl font-semibold hover:bg-purple-700">
-            Apply to Become an Instructor
-          </a>
+        <div class="bg-zinc-50 border border-zinc-100 rounded-3xl p-12 hover:shadow-xl transition">
+          <div class="text-7xl mb-8">🎓</div>
+          <h3 class="text-4xl font-bold mb-4">Become an Instructor</h3>
+          <p class="text-xl text-zinc-600 mb-10">Create your own course and keep up to 70% of revenue. We handle marketing & payments.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUBjj1y21JWTiOApf1_2dNC6n89kSHvuQcA5MhDYiFm3q9fA/viewform?usp=publish-editor" target="_blank"
+             class="block w-full text-center py-5 bg-purple-600 text-white rounded-3xl font-semibold text-lg hover:bg-purple-700">Apply as Instructor</a>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-24 bg-zinc-900 text-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">What Our Students Say</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-800 p-8 rounded-3xl">
+          <p class="italic mb-6">"The AI Tools course helped me land my first freelance gig within 2 weeks!"</p>
+          <div class="font-semibold">— Aisha O., Lagos</div>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-3xl">
+          <p class="italic mb-6">"Digital Marketing course gave me practical skills. I now run ads for 3 local businesses."</p>
+          <div class="font-semibold">— Chinedu M., Abuja</div>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-3xl">
+          <p class="italic mb-6">"Freelancing course changed my life. I’m earning ₦250k+ monthly from home."</p>
+          <div class="font-semibold">— Fatima B., Ibadan</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="text-2xl font-bold mb-2">SkillBloom Academy</p>
-      <p class="mb-6">Learn • Grow • Earn • Nigeria & Beyond</p>
-      <p class="text-sm text-gray-400">© 2026 SkillBloom Academy. All rights reserved.</p>
-      <div class="flex justify-center gap-6 mt-8">
-        <a href="https://wa.me/234XXXXXXXXXX" class="hover:text-indigo-400"><i class="fab fa-whatsapp text-2xl"></i></a>
-        <a href="#" class="hover:text-indigo-400"><i class="fab fa-instagram text-2xl"></i></a>
-        <a href="#" class="hover:text-indigo-400"><i class="fab fa-tiktok text-2xl"></i></a>
+  <footer class="bg-zinc-950 text-zinc-400 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 text-white mb-6">
+            <div class="w-9 h-9 bg-indigo-600 rounded-2xl flex items-center justify-center font-bold text-2xl">S</div>
+            <span class="font-bold text-2xl">SkillBloom Academy</span>
+          </div>
+          <p>Empowering young Nigerians with in-demand skills.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#courses" class="hover:text-white">Courses</a></li>
+            <li><a href="#earn" class="hover:text-white">Earn With Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Contact</h4>
+          <p>WhatsApp: <a href="https://wa.me/234XXXXXXXXXX" class="hover:text-white">+234 XXX XXX XXXX</a></p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Newsletter</h4>
+          <p class="text-sm mb-4">Get free tips & course updates</p>
+          <input type="email" placeholder="Your email" class="bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-3 w-full focus:outline-none focus:border-indigo-500">
+        </div>
+      </div>
+      <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
+        © 2026 SkillBloom Academy. All rights reserved.
       </div>
     </div>
   </footer>
 
   <script>
-    // Free Course Enrollment
     function enrollFree(courseName) {
       const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdjFOLrKlAzkylYlUDtBZ9YZZC7qcr2aCgC5Il744OJdy-CPw/viewform?usp=publish-editor";
-      alert(`Redirecting to enroll in: ${courseName}\n\nAfter submitting the form, check your WhatsApp for course access.`);
+      alert(`Redirecting to ${courseName} free enrollment...\n\nAfter submitting, you'll get access details via WhatsApp.`);
       window.open(formUrl, "_blank");
     }
 
-    // Paystack Payment Function (using your Test Key)
     function payWithPaystack(courseName, amountInNaira) {
       const publicKey = "pk_test_17e4ef86438ebbaacd7b57bce511bfb73cf2d674";
 
       const handler = PaystackPop.setup({
         key: publicKey,
-        email: prompt("Enter your email address for receipt:") || "student@skillbloom.com",
-        amount: amountInNaira * 100,   // Convert Naira to kobo
+        email: prompt("Enter your email for receipt:") || "student@skillbloom.com",
+        amount: amountInNaira * 100,
         currency: "NGN",
-        ref: "SKB_" + Math.floor((Math.random() * 1000000000) + 1),
-        metadata: {
-          custom_fields: [
-            { display_name: "Course", variable_name: "course", value: courseName }
-          ]
-        },
+        ref: "SKB_" + Math.floor(Math.random() * 1000000000),
+        metadata: { custom_fields: [{ display_name: "Course", variable_name: "course", value: courseName }] },
         callback: function(response) {
-          alert(`🎉 Payment successful!\nReference: ${response.reference}\n\nYou will receive course access details via WhatsApp shortly.`);
-          console.log(response);
+          alert(`🎉 Payment Successful!\nReference: ${response.reference}\n\nCourse access will be sent to your WhatsApp shortly.`);
         },
         onClose: function() {
-          alert("Payment window closed. You can try again anytime.");
+          alert("Payment cancelled. You can try again anytime.");
         }
       });
       handler.openIframe();
     }
   </script>
 </body>
-</html>
+            </html>
